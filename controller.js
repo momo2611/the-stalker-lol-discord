@@ -6,7 +6,7 @@ const riotKey = 'RGAPI-00d132f6-1ed5-448c-8509-3fbf91427746';
 
 const showInfo = async (req, res) => {
     const { summonerName } = req.params;
-    var url = 'https://sea.api.riotgames.com/lol/summoner/v4/summoners/by-name/';
+    var url = 'https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/';
     url = url.concat(summonerName);
     let resp = await fetch(url, {
         headers: {
@@ -25,7 +25,7 @@ const showInfo = async (req, res) => {
 //get game info
 const gameInfo = async (req, res) => {
     const { summonerId } = req.params;
-    var url = 'https://sea.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/';
+    var url = 'https://kr.api.riotgames.com/lol/spectator/v4/active-games/by-summoner/';
     url = url.concat(summonerId);
     let resp = await fetch(url, {
         headers: {
@@ -46,7 +46,7 @@ const champInfo = async (req, res) => {
     //console.log(summonerId);
     const { championId } = req.params;
     //console.log(championId);
-    var url = "https://sea.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/";
+    var url = "https://kr.api.riotgames.com/lol/champion-mastery/v4/champion-masteries/by-summoner/";
     url = url.concat(summonerId);
     url = url.concat("/by-champion/");
     url = url.concat(championId);
@@ -67,7 +67,7 @@ const champInfo = async (req, res) => {
 //get rank info
 const rankInfo = async (req, res) => {
     const { summonerId } = req.params;
-    url = "https://sea.api.riotgames.com/lol/league/v4/entries/by-summoner/";
+    url = "https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/";
     url = url.concat(summonerId);
     //console.log(url);
     let resp = await fetch(url, {
