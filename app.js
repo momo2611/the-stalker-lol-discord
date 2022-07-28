@@ -82,7 +82,7 @@ client.on('messageCreate', async (message) => {
             var id = info.data.id;
 
 
-            //2.get game info
+            //2.get game info but something happened
             id = id.toString();
             var currentChampion;
             var url2 = 'http://localhost:3000/summonergame/';
