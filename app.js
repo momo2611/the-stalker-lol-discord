@@ -261,8 +261,8 @@ client.on('messageCreate', async (message) => {
 
         if (messageArray[1] == "help") {
             client.channels.cache.get(channelId2).send('>>> ```to see champion info: !sc summonerName champion championName' +
-                '\nto get my info: !sc summonerName info\nto get icon: !sc summonerName icon\nto get rank info: !sc summonerName rank queueType' +
-                "\nto see game info: !sc summonerName game```");
+                '\nto get my info: !sc summonerName info\nto get icon: !sc summonerName icon\nto get rank info: !sc summonerName rank [solo/flex]' +
+                '\nto see game info: !sc summonerName game```');
         }
 
         //get icon
